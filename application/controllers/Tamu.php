@@ -208,4 +208,20 @@ class Tamu extends CI_Controller
 
         return redirect(base_url('index.php/event/detail/' . $event_id), 'refresh');
     }
+
+    public function searchTamu(string $keyword = null)
+    {
+        // $tamu = $this->tamu_model->listing();
+
+        header("Content-Type: application/json");
+        $this->db->select('*');
+        $this->db->from('tamu');
+        if (!is_null($keyword)) {
+            $this->db->like('nama', $keyword, 'both');
+        }
+        $this->db->order_by('id_tamu', 'asc');
+        $query = $this->db->get()->result_array();
+
+        echo json_encode($query);
+    }
 }

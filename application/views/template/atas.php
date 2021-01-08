@@ -35,9 +35,9 @@
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" data-toggle="modal" data-target="#modal-search-tamu">
         <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
+          <button class="btn btn-navbar">
             <i class="fas fa-search"></i>
           </button>
         </div>

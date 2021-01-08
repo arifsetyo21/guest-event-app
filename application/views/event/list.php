@@ -34,7 +34,8 @@ if ($this->session->flashdata('fail')) {
  			<tr>
  				<td><?php echo $event->name ?></td>
  				<td><?php echo $event->start_at_carbon ?></td>
- 				<td><?php echo $event->end_at_carbon ?></td>
+ 				<td><?=strtotime($event->end_at)?></td>
+				 <td><?=time()?></td>
  				<td><?php echo $event->location ?></td>
  				<td><?php echo $event->notes ?></td>
  				<td><?php echo (strtotime($event->end_at) < time()) ? '<button type="button" class="btn btn-block btn-danger">Usang</button>' : '<button type="button" class="btn btn-block btn-success">Aktif</button>' ?></td>

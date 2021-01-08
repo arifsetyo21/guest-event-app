@@ -23,6 +23,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
  */
+
+date_default_timezone_set('Asia/Jakarta');
 // $config['base_url'] = 'http://localhost/new-project/';
 $config['base_url'] = 'http://mba-renata-skripsi.test/';
 
@@ -489,7 +491,7 @@ $config['compress_output'] = false;
 | helper' page of the user guide for information regarding date handling.
 |
  */
-$config['time_reference'] = 'local';
+$config['time_reference'] = 'Asia/Jakarta';
 
 /*
 |--------------------------------------------------------------------------
